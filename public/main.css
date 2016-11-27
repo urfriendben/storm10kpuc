@@ -1,0 +1,135 @@
+@font-face {
+font-family: circula-medium;
+src: url("circula-medium.otf") format("opentype");
+}
+
+html, body {
+    font-family:'circula-medium';
+    height:100%;
+    margin:0px;
+    padding:0px!important;
+    overflow:hidden;
+}
+
+#heading {
+    margin:0px;
+    background-color:#3498db;
+    color:#f1f1f1;
+    text-align:center;
+}
+
+#total-count{
+    font-size:8em;
+}
+
+#personal-holder{
+    color:#d3d3d3;
+    font-size:2em;
+}
+
+#personal-bib, #personal-count{
+    color:#f1f1f1;
+    font-weight:bolder;
+}
+
+#counter, #counter-action{
+    color:black;
+    padding:0px;
+}
+
+#counter p{
+    padding-top:13%;
+    padding-right:0px;
+}
+
+#counter p a{
+    color:black;
+}
+
+#counter-placeholder{
+    position:absolute;
+    bottom:0px;
+}
+
+#counter-action{
+    font-size:2em;
+    color:#e3e3e3;
+    text-align:center;
+}
+
+#counter-action-p{
+    padding-right:0px;
+}
+
+.holder-text{
+    text-align:center;
+    color:#d1d1d1;
+    font-size:3em;
+    padding-left:0px;
+}
+
+#counter-personal-value{
+    text-align:right;
+    font-size:3em;
+    padding-bottom:50px;
+}
+
+#counter-count-value{
+    text-align:left;
+    font-size:3em;
+    font-weight:lighter;
+}
+
+#minus-holder, #info-holder, #plus-holder{
+    padding:30px;
+}
+
+#minus-holder, #info-holder{
+    color:#818181;
+}
+
+#minus-holder i, #info-holder i{
+    width:50px;
+    padding:10px;
+    background-color:#c1c1c1;
+    border-radius:30px;
+}
+
+#plus-holder{
+    border-radius:100px;
+    background:#818181;
+}
+
+#view-ranking{
+    position:absolute;
+    top:20px;
+    right:20px;
+    color:white;
+    font-size:2em;
+}
+
+.rank_bib{
+    margin-left:30px;
+    text-align: center;
+    padding: 10px;
+    padding-left:50px;
+    padding-right:50px;
+    color:white;
+    border-radius:80px;
+}
+
+.rank_count{
+    padding-left:80px;
+}
+
+#rank_first{
+    background-color:#a1a1a1;
+}
+
+#rank_second{
+    background-color:#b1b1b1;
+}
+
+#rank_third{
+    background-color:#c1c1c1;
+}

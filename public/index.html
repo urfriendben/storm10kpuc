@@ -1,0 +1,104 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>STORM 10K Pull Up Challenge</title>
+        <script   src="https://code.jquery.com/jquery-3.1.1.slim.min.js"   integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="   crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="main.css"/>
+    </head>
+    <body class="col-xs-12">
+        <div id="heading" class="col-xs-12">
+            <div id="heading-info-placeholder" class="col-xs-12">
+                <p>
+                    <span id="total-count">0</span>
+                </p>
+                <p id="personal-holder">
+                    <span id="personal-bib">SEE WHO</span><span>&nbsp;DID&nbsp;</span><span id="personal-count">HOW MUCH</span>
+                </p>
+            </div>
+        </div>
+        <div id="counter" class="col-xs-12">
+            <p id="counter-personal-value" class="col-xs-3"><input id="bib-input" class="col-xs-11" type="number" placeholder="XXX"/></p>
+            <p class="col-xs-6 holder-text">&nbsp;HAS DONE&nbsp;</p>
+            <p id="counter-count-value" class="col-xs-3"><input id="count-input" class="col-xs-11" type="number" placeholder="XXX"/></p>
+        </div>
+        <div id="counter-placeholder" class="col-xs-12">
+            <div id="counter-action" class="col-xs-12">
+                <p id="minus-holder" class="col-xs-4">
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                </p>
+                <p id="plus-holder" class="col-xs-4">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </p>
+                <p id="info-holder" class="col-xs-4">
+                    <i class="fa fa-info" aria-hidden="true"></i>
+                </p>
+            </div>
+        </div>
+        <i id="view-ranking" class="fa fa-glass" aria-hidden="true" data-toggle="modal" data-target="#ranking-modal"></i>
+        <div id="ranking-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"/>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Top Pullers</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table style="margin-left:30px">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h1><i class="fa fa-glass" style="color:#f1c40f"></i></h1>
+                                    </td>
+                                    <td>
+                                        <h1 id="rank_first" class="rank_bib"></h1>
+                                    </td>
+                                    <td>
+                                        <h1 id="rank_first_count" style="color:#f1c40f" class="rank_count"></h1>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h2><i class="fa fa-glass" style="color:#7f8c8d"></i></h2>
+                                    </td>
+                                    <td>
+                                        <h2 id="rank_second" class="rank_bib"></h2>
+                                    </td>
+                                    <td>
+                                        <h2 id="rank_second_count" style="color:#7f8c8d" class="rank_count"></h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h3><i class="fa fa-glass" style="color:#EB9532"></i></h3>
+                                    </td>
+                                    <td>
+                                        <h3 id="rank_third" class="rank_bib"></h3>
+                                    </td>
+                                    <td>
+                                        <h3 id="rank_third_count" style="color:#EB9532" class="rank_count"></h3>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <table class="table table-striped">
+                            <tbody id="count-table">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
